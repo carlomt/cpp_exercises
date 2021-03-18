@@ -15,8 +15,8 @@ public:
   // inline Vector Position(){return fPosition;};
   // inline int ID(){return fId;};
   // inline double Speed(){return fSpeed;};
-  inline Vector Direction() const {return fDirection;};
-  inline Vector Position() const {return fPosition;};
+  inline const Vector& Direction() const {return fDirection;};
+  inline const Vector& Position() const {return fPosition;};
   inline int ID() const {return fId;};
   inline double Speed() const {return fSpeed;};
   bool operator==(const Airplane& other);

@@ -23,14 +23,14 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 #----------------------------------------------------------------------------
 # Setup ROOT include directories and compile definitions
 #
-# find_package(ROOT)
+find_package(ROOT)
 # if(NOT ROOT_FOUND OR WITHOUT_ROOT)
 #   message(WARNING "ROOT not found or disabled by hand")
 #   add_definitions(-D__WITHOUT_ROOT__)
 #   list(REMOVE_ITEM sources ${PROJECT_SOURCE_DIR}/src/TreeManager.cc)
 #   list(REMOVE_ITEM headers ${PROJECT_SOURCE_DIR}/include/TreeManager.hh)
 # else()
-#   include_directories(${ROOT_INCLUDE_DIRS})
+  include_directories(${ROOT_INCLUDE_DIRS})
 # endif()
 
 #----------------------------------------------------------------------------
@@ -41,7 +41,7 @@ add_executable(pi.x pi.cpp ${sources} ${headers})
 add_executable(main.x main.cpp ${sources} ${headers})
 
 # if(ROOT_FOUND)
-#   target_link_libraries(main.x ${ROOT_LIBRARIES})
+  target_link_libraries(main.x ${ROOT_LIBRARIES})
 # endif()
 
 #----------------------------------------------------------------------------

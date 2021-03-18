@@ -3,6 +3,9 @@
 #include <random>
 #include <fstream>
 
+#include "TCanvas.h"
+#include "TH1F.h"
+
 #include "Vector.hh"
 #include "Airplane.hh"
 #include "Initializer.hh"
@@ -74,6 +77,9 @@ int main(int argc, char *argv[])
 	}
       t++;
     }
+
+  auto cc = std::make_unique<TCanvas>("cc","cc");
+  
   cout<<"End of program"<<endl;
   return 0;
 }
